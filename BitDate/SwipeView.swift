@@ -30,18 +30,13 @@ class SwipeView: UIView {
     
     private var originalPoint: CGPoint?
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         initialize()
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        initialize()
-    }
-    
-    override init() {
-        super.init()
         initialize()
     }
     
@@ -54,7 +49,7 @@ class SwipeView: UIView {
     
     func dragged(gestureRecognizer: UIPanGestureRecognizer) {
         let distance = gestureRecognizer.translationInView(self)
-        println("Distance x:\(distance.x) y: \(distance.y)")
+        print("Distance x:\(distance.x) y: \(distance.y)")
         
         switch gestureRecognizer.state{
         case UIGestureRecognizerState.Began:
@@ -76,7 +71,7 @@ class SwipeView: UIView {
             }
             
         default:
-            println("Default trigged for GestureRecognizer")
+            print("Default trigged for GestureRecognizer")
             break
         }
     }

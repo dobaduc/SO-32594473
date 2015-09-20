@@ -30,13 +30,17 @@ class ViewController: UIPageViewController, UIPageViewControllerDataSource {
     }
 
     func goToNextVC() {
-        let nextVC = pageViewController(self, viewControllerAfterViewController: viewControllers[0] as UIViewController)!
-        setViewControllers([nextVC], direction: UIPageViewControllerNavigationDirection.Forward, animated: true, completion: nil)
+        if let viewControllers = viewControllers {
+            let nextVC = pageViewController(self, viewControllerAfterViewController:viewControllers[0] as UIViewController)!
+            setViewControllers([nextVC], direction: UIPageViewControllerNavigationDirection.Forward, animated: true, completion: nil)
+        }
     }
     
     func goToPreviousVC() {
-        let previousVC = pageViewController(self, viewControllerBeforeViewController: viewControllers[0] as UIViewController)!
-        setViewControllers([previousVC], direction: UIPageViewControllerNavigationDirection.Reverse, animated: true, completion: nil)
+        if let viewControllers = viewControllers {
+            let previousVC = pageViewController(self, viewControllerBeforeViewController: viewControllers[0] as UIViewController)
+            setViewControllers([previousVC!], direction: UIPageViewControllerNavigationDirection.Reverse, animated: true, completion: nil)
+        }
     }
     
     

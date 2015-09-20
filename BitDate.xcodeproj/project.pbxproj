@@ -282,6 +282,8 @@
 		6FBB8EE01AC0F756007DEF27 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = bitfountain;
 				TargetAttributes = {
@@ -510,6 +512,7 @@
 					"$(PROJECT_DIR)/BitDate",
 				);
 				INFOPLIST_FILE = BitDate/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "BitDate/Bridging-Header.h";
@@ -526,6 +529,7 @@
 					"$(PROJECT_DIR)/BitDate",
 				);
 				INFOPLIST_FILE = BitDate/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "BitDate/Bridging-Header.h";

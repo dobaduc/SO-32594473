@@ -71,14 +71,14 @@ class CardsViewController: UIViewController, SwipeViewDelegate {
     // MARK: SwipeViewDelegate
     
     func swipedLeft() {
-        println("left")
+        print("left")
         if let frontCard = frontCard {
             frontCard.swipeView.removeFromSuperview()
         }
     }
     
     func swipedRight() {
-        println("right")
+        print("right")
         if let frontCard = frontCard {
             frontCard.swipeView.removeFromSuperview()
         }
